@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class MaximumWealthArray{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int max =0;
+       int arr[][] = new int[3][3];
+       int Sum[] = new int[3];
+       for (int  i= 0;i<arr.length;i++) {
+           for(int j = 0;j<arr.length;j++){
+               arr[i][j] = sc.nextInt();
+           }
+       }
+        for (int i = 0;i<arr.length;i++) {
+           sum = 0;
+           for(int j = 0;j<arr.length;j++){
+              sum = sum+arr[i][j];
+           }
+           Sum[i] = sum;
+       }
+       max = Sum[0];
+       for (int i = 0;i<Sum.length;i++) {
+           if (Sum[i]>max) {
+               max = Sum[i];
+           }
+       }
+       System.out.println("Maximum amount :"+max);
+    }
+}
