@@ -1,0 +1,16 @@
+public class EvenDigits{
+    public static void main(String[] args) {
+        int arr[] = {2,34,567,7890};
+        for(int i=0;i<arr.length;i++){
+            int count=0; //notable step 
+            int n=arr[i];
+            while (n>0) { 
+                   count+=1;
+                n/=10;
+            }
+             if(count%2==0){
+                System.out.println(arr[i]+" ");
+            }
+        }
+    }
+}
